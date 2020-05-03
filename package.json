@@ -1,8 +1,6 @@
 {
   "name": "bt-device",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A small (900 byte) Custom Element to make Web Bluetooth a little easier to use.",
   "scripts": {
     "build": "pika-pack",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,8 +19,8 @@
     ]
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Matt Steele",
+  "license": "MIT",
   "devDependencies": {
     "@pika/pack": "^0.5.0",
     "@pika/plugin-build-web": "^0.9.2",
