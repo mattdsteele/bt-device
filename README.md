@@ -9,7 +9,7 @@ A small (900 byte) Custom Element to make [Web Bluetooth](https://steele.blue/we
 Import it via your method of choice, but unpkg works great
 
 ```html
-<script type="module" src="https://unpkg.com/bt-device?module">
+<script type="module" src="https://unpkg.com/bt-device?module"></script>
 ```
 
 Then add a (render-less) element to your page with the settings you'd like:
@@ -20,7 +20,7 @@ Then add a (render-less) element to your page with the settings you'd like:
   service="40fc0000-8a8d-4a32-a455-c1148e24a9f1"
   characteristic="40fc0001-8a8d-4a32-a455-c1148e24a9f1"
   notifications="true"
-/>
+></bt-device>
 ```
 
 ## Properties
