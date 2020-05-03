@@ -2,6 +2,8 @@
 
 A small (900 byte) Custom Element to make [Web Bluetooth](https://steele.blue/web-bluetooth/) a little easier to use.
 
+**See it in action** (with a Bluetooth heart rate monitor): https://output.jsbin.com/mohezur/11
+
 ## Usage
 
 Import it via your method of choice, but unpkg works great
