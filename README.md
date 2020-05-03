@@ -1,6 +1,6 @@
 # `<bt-device>`
 
-A Custom Element to make [Web Bluetooth](https://steele.blue/web-bluetooth/) a little easier to use.
+A small (900 byte) Custom Element to make [Web Bluetooth](https://steele.blue/web-bluetooth/) a little easier to use.
 
 ## Usage
 
