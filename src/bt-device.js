@@ -13,16 +13,16 @@ export class BTDevice extends HTMLElement {
     };
     this.device = await navigator.bluetooth.requestDevice(options);
     this.gatt = await this.device.gatt.connect();
-    this.service = await this.gatt.getPrimaryService(this.prop('service'));
-    this.char = await this.service.getCharacteristic(
+    this.btService = await this.gatt.getPrimaryService(this.prop('service'));
+    this.btChar = await this.btService.getCharacteristic(
       this.prop('characteristic')
     );
     if (!this.device) {
       throw 'No device selected';
     }
     if (this.prop('notifications')) {
-      await this.char.startNotifications();
-      this.char.addEventListener('characteristicvaluechanged', (ev) => {
+      await this.btChar.startNotifications();
+      this.btChar.addEventListener('characteristicvaluechanged', (ev) => {
         let { value } = ev.target;
         if (this.parse) {
           value = this.parse(value);

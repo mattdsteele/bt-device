@@ -50,6 +50,16 @@ btDevice.parse = (input) {
 }
 ```
 
+## Generated Properties
+
+`btService: BluetoothRemoteGATTService`
+
+Once connected, provides access to the service interface
+
+`btChar: BluetoothGATTCharacteristic`
+
+Once connected, provides access to the characteristic interface
+
 ## Methods
 
 `connect(): Promise<void>`
