@@ -4,7 +4,7 @@ export class BTDevice extends HTMLElement {
   }
   async connect() {
     const service = this.prop('service');
-    const options = {
+    const options = this.connectOptions || {
       filters: [
         {
           services: [service],

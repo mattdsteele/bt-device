@@ -50,6 +50,10 @@ btDevice.parse = (input) {
 }
 ```
 
+`connectOptions: Object`
+
+Override the auto-generated connection options object. See https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice for details
+
 ## Generated Properties
 
 `btService: BluetoothRemoteGATTService`
