@@ -1,5 +1,6 @@
 {
   "name": "bt-device",
+  "version": "1.0.12",
   "description": "A small (900 byte) Custom Element to make Web Bluetooth a little easier to use.",
   "scripts": {
     "build": "pika-pack",
