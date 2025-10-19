@@ -1,14 +1,20 @@
-on: push
 name: Build and Publish
+on:
+  push:
+    tags: '*'
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
 jobs:
   all:
     name: Build and Publish
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
       - name: Cache node_modules
         id: cache-modules
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.OS }}-build-${{ hashFiles('package.json') }}
@@ -17,12 +23,5 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      # - name: Test
-      #   run: npm test
       - name: Publish
-        if: github.ref == 'refs/heads/main'
-        uses: mikeal/merge-release@master
-        env:
-          DEPLOY_DIR: pkg
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        run: npm publish pkg
